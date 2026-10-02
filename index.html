@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VocabTalk</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="welcome" class="screen active">
+    <h1>VocabTalk</h1>
+    <p class="tagline">Learn better words. Use them naturally.</p>
+    <p class="desc">Choose a subject, explore flashcards, listen to voice explanations, and test yourself with a short quiz.</p>
+    <button class="btn primary" data-go="tone">Start Learning</button>
+  </section>
+
+  <section id="tone" class="screen">
+    <h2>Pick your tone</h2>
+    <div class="grid">
+      <button class="card choice" data-tone="casual"><h3>Casual</h3><p>Everyday, relaxed language</p></button>
+      <button class="card choice" data-tone="formal"><h3>Formal</h3><p>Polished, professional language</p></button>
+    </div>
+    <button class="btn back" data-go="welcome">⬅ Back</button>
+  </section>
+
+  <section id="subject" class="screen">
+    <h2>Choose a subject</h2>
+    <div class="grid" id="subjectGrid"></div>
+    <button class="btn back" data-go="tone">⬅ Back</button>
+  </section>
+
+  <section id="flashcards" class="screen">
+    <h2 id="fcTitle"></h2>
+    <div class="grid" id="cardGrid"></div>
+    <div class="nav">
+      <button class="btn back" data-go="subject">⬅ Back</button>
+      <button class="btn primary" id="startQuiz">Start Quiz</button>
+    </div>
+  </section>
+
+  <section id="quiz" class="screen">
+    <h2>Quiz</h2>
+    <div class="progress"><div id="bar"></div></div>
+    <div id="questions"></div>
+    <div class="nav">
+      <button class="btn back" data-go="flashcards">⬅ Back</button>
+      <button class="btn primary" id="finishQuiz">Finish Quiz</button>
+    </div>
+  </section>
+
+  <section id="results" class="screen">
+    <div class="card result">
+      <h2>Results</h2>
+      <p class="score" id="score"></p>
+      <p id="feedback"></p>
+    </div>
+    <div class="nav">
+      <button class="btn back" data-go="quiz">⬅ Back</button>
+      <button class="btn primary" data-go="tone">Practice Again</button>
+    </div>
+  </section>
+</main>
+
+<section id="about">
+  <div class="avatar">AK</div>
+  <h2>About the author</h2>
+  <p class="lead">Hi, I'm <strong>Aditya Kapse</strong> — Data Analyst and AI Enthusiast.</p>
+  <p>I’m someone who loves exploring AI, learning new things, and taking on responsibilities. And I enjoy experiencing and trying out new challenges while growing through every opportunity.</p>
+  <div class="links">
+    <a href="https://github.com/AdItYa-KaPsE/Resume-for-data-analyst/blob/main/Aditya_kapse_Exp.pdf" target="_blank" rel="noopener">📄 Resume</a>
+    <a href="https://www.linkedin.com/in/adityakapse" target="_blank" rel="noopener">💼 LinkedIn</a>
+    <a href="https://github.com/AdItYa-KaPsE" target="_blank" rel="noopener">🐙 GitHub</a>
+  </div>
+</section>
+
+<footer>This was limited for prototype — more features can be added.</footer>
+<script src="app.js"></script>
+</body>
+</html>
